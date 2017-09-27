@@ -38,7 +38,7 @@ class CityWeather(object):
                         self.weather['temperature_string'], self.weather['feelslike_string'], 
                         self.weather['weather'], self.weather['relative_humidity'], self.weather['wind_string'])
         else:
-            return "Could not find Current Observation for given city, please check speeling for command line options."
+            return "Could not find Current Observation for given city, please check spelling for command line options."
             
             
             

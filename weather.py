@@ -28,7 +28,8 @@ class CityWeather(object):
             f.close()
 
     def __str__(self):
-        return "Location: {0}\
+        if self.weather:
+            return "Location: {0}\
             \nTemparature: {1}\
             \nFeeld Like: {2}\
             \nWeather: {3}\
@@ -36,6 +37,8 @@ class CityWeather(object):
             \nWind: {5}".format(self.weather['display_location']['full'], \
                         self.weather['temperature_string'], self.weather['feelslike_string'], 
                         self.weather['weather'], self.weather['relative_humidity'], self.weather['wind_string'])
+        else:
+            return "Could not find Current Observation for given city, please check speeling for command line options."
             
             
             
